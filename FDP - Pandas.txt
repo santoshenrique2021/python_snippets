@@ -1,0 +1,6 @@
+#Plotar uma função de densidade de probabilidade
+
+
+df['VARIAVEL_NUMERICA'].plot.density(color='green')
+plt.title('Densidade VARIAVEL_NUMERICA')
+plt.show()

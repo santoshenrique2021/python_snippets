@@ -1,0 +1,10 @@
+#Criar uma variável dummy a partir de uma variável categórica
+
+#Transformar a variável segmento em one hot encoding
+df_encoded = pd.get_dummies(df, columns=['variavel_categorica'], prefix='variavel_categorica', dtype=int)
+
+coluna_original = df['variavel_categorica'] #Permite incluir a variável original na tabela dos dados
+
+df_final = pd.concat([df_encoded, coluna_original], axis=1)
+#Visualização
+df_final.head(3)

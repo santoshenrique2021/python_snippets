@@ -1,0 +1,3 @@
+#Eesumo das colunas do dataframe
+##Nome e tipo das variáveis de cada coluna do dataframe
+df.info()

@@ -1,0 +1,3 @@
+Desvio padrão de uma coluna no pandas
+
+df['NOME_DA_COLUNA'].std()

@@ -1,0 +1,2 @@
+#Percentual de valores nulos de uma coluna
+round(df['VARIAVEL'].isnull().mean() * 100,2)

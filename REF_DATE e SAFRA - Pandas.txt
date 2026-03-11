@@ -1,0 +1,21 @@
+#Contexto em que a variável data vem com timezone
+
+#Assim, cria-se REF_DATE e SAFRA
+
+#REF_DATE no formato de data
+df['REF_DATE'] = pd.to_datetime(df.REF_DATE, format = '%Y-%m-%d')
+
+# FUNCTION TO REMOVE TIMEZONE
+def remove_timezone(dt):
+   
+    # HERE `dt` is a python datetime
+    # object that used .replace() method
+    return dt.replace(tzinfo=None)
+
+#Remover a TIMEZONE da variável REF_DATE
+df['REF_DATE'] = df['REF_DATE'].apply(remove_timezone)
+
+#Reestruturar a variável safra
+df['SAFRA'] = df['REF_DATE'].dt.to_period('M')
+#Casting para string
+df = df.astype({'SAFRA': 'string'})

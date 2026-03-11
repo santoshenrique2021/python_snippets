@@ -1,0 +1,7 @@
+#Calcular a frequência absoluta e relativa de uma variável
+
+def freq_abs_rel(serie):
+    return serie.value_counts().to_frame('abs').join(serie.value_counts(normalize=True).to_frame('rel').round(4))
+
+freq_nome_variavel = freq_abs_rel(df_completo['nome_variavel'])
+freq_nome_variavel

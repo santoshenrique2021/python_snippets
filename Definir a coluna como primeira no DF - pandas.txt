@@ -1,0 +1,7 @@
+#Definir uma coluna como primeira do data frame
+
+# Definir a coluna que será a primeira do data frame
+first_column = df.pop('COLUNA_A')
+  
+# insert column using insert(position,column_name,first_column) function
+df.insert(0, 'COLUNA', first_column)

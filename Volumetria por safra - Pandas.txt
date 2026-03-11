@@ -1,0 +1,5 @@
+#Volumetria por safra
+
+
+vol_safra = df.groupby(['SAFRA'])['SAFRA'].count()
+vol_safra.head(10)

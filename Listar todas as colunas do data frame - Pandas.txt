@@ -1,0 +1,3 @@
+#Listar as colunas do data frame
+for coluna in df.columns:
+    print(coluna)

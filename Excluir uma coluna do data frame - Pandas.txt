@@ -1,0 +1,2 @@
+#Excluir uma coluna do data frame
+df = df.drop('NOME_DA_COLUNA', axis=1)

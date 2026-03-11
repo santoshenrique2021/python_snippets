@@ -1,0 +1,9 @@
+#Remover os valores nulos de uma coluna do data frame
+
+##Abordagem 1 - criar um novo data frame
+
+df_2 = df.drop_na(subset = ['VARIAVEL'])
+
+##Abordagem 2 - utilizar o mesmo data frame
+
+df.dropna(subset=['VARIAVEL'], inplace=True)

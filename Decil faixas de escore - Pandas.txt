@@ -1,0 +1,3 @@
+#Os percentis da faixa de escore
+
+df['VARIAVEL_ESCORE'].quantile(np.linspace(0.10,1,10))

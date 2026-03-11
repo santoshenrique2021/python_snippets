@@ -1,0 +1,2 @@
+#Identificar os tipos de variáveis no DF
+df.dtypes #assim, é possível saber o tipo (e o nome) de cada variável no DF.

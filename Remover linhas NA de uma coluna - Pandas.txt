@@ -1,0 +1,3 @@
+#Remover as observações NA com base em um colunea
+
+df = df[df['NOME_DA_VARIAVEL'].notna()]

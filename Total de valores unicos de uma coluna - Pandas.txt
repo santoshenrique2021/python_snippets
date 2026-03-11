@@ -1,0 +1,4 @@
+#Total de valores únicos de uma coluna
+##Tenho uma coluna categórica e desejo saber quantas classes ela tem:
+
+df['VARIAVEL_CATEGÓRICA'].nunique()

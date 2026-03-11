@@ -1,0 +1,3 @@
+#Cast para string
+##Mudar o tipo de variável de uma coluna no dataframe
+df['NOME_DA_VARIAVEL'] = df['NOME_DA_VARIAVEL'].map(str)

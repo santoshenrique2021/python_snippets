@@ -1,0 +1,5 @@
+#Trocar o missing de uma coluna por algum valor
+
+##Por exemplo - trocar o missing por 0
+
+df['COLUNA_REQUERIDA'] = df['COLUNA_REQUERIDA'].fillna(0)

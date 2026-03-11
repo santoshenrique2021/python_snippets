@@ -1,0 +1,4 @@
+#Colocar todas as colunas de um data frame como string
+##Casting geral
+
+df = df.astype(object)

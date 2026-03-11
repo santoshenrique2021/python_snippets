@@ -1,0 +1,2 @@
+#Percentual de missing para cada variável
+((df.isnull() | df.isna()).sum() * 100 / df.index.size).round(2)

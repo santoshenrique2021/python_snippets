@@ -1,0 +1,15 @@
+#Aglutinar todas as bases (do formato CSV) de um diretório num único arquivo
+
+import glob
+
+file_names = glob.glob('*.csv') #Cria uma lista com todos os arquivos csv que estão no diretório
+
+data_frames = [] #Cria uma lista vazia que será preenchida através do loop for
+
+for file in file_names:
+    df = pd.read_csv(file, sep=',')
+    data_frames.append(df)
+    print(f"Read {file}: Shape = {df.shape}")
+
+
+base_full = pd.concat(data_frames, ignore_index=True) #Concatena essa tabela num arquivo único como um data frame. 

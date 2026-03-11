@@ -1,0 +1,7 @@
+#Uma variável
+df['NOME_DA_VARIAVEL'].describe()
+#Duas variáves
+df[['NOME_DA_VARIAVEL_1', 'NOME_DA_VARIAVEL_2']]
+
+##Nota - na primeira linha
+Ele vê a contagem de elementos/ preenchimento

@@ -1,0 +1,2 @@
+#Total de observações por SAFRA
+df.groupby('SAFRA').size().reset_index(name='counts')

@@ -1,0 +1,19 @@
+#Scatter plot
+##Visão 2
+
+# Dados fornecidos
+--Imagina que eu tenho duas variáveis e quero montar o gráfico de dispersão delas
+var_1 = [adicionar os valores]
+var_2 = [adicionar os valores]
+
+# Criando um DataFrame
+data = {'nome_da_coluna': var_1, 'nome_da_coluna': var_2}
+df_relacao = pd.DataFrame(data)
+
+# Criando o gráfico de dispersão
+ax = df_relacao.plot.scatter(x='nome_varivel_eixo_x', y='nome_varivel_eixo_x', title='TITULO\nSUBTITULO', color='blue')
+
+# Exibindo o gráfico
+plt.xlabel('nome_da_coluna')
+plt.ylabel('nome_da_coluna')
+plt.show()

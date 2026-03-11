@@ -1,0 +1,10 @@
+#Criação de flag simples
+##A variável flag só tem dois valores - 0 ou 1
+##Simples - é por que só tem uma condição. Esta condição é relacionada uma característica da variável de interesse
+
+
+df['flag'] = (df['variavel_interesse'] XX VALOR).astype(int)
+
+
+###XX: ==, >, <, >=, <=, !=
+###VALOR: valor que a variável deve assumir

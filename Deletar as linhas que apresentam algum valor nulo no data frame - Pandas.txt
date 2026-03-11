@@ -1,0 +1,6 @@
+#Deletar as linhas que apresentam algum valor nulo no data frame
+
+##Motivação: Quero remover todas as linhas em que exista algum valor nulo para uma determinada variável
+
+
+df_2 = df.dropna().reset_index(drop=True) #Estou reiniciando a contagem do index

@@ -1,0 +1,7 @@
+#Criar uma variável FLAG com uma condição (simples)
+
+df['NOME_DA_VARIAVEL_FLAG'] = np.where(df['VARIAVEL_DA_CONDICAO'] XX YY, 1,0)
+
+#XX - é o tipo da condição, exemplo: == (igual), > (maior), <(menor), != (diferente)
+
+#YY - é o valor comparado, pode ser um número ou string

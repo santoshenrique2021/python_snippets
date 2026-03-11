@@ -1,0 +1,11 @@
+#Transformar frequência relativa num data frame
+##Tipo da variável: categórica
+
+#Distribuição 
+df_final = round(100 * df['nome_variavel'].value_counts(True),2)
+#Transformar num data frame
+##Converte a série em um DataFrame e renomeia as colunas
+df_final = df_final.reset_index()
+df_final.columns = ['NOME_VARIAVEL', 'Percentual']
+#Visualização
+df_final.head(3)

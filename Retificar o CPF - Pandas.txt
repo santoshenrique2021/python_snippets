@@ -1,0 +1,15 @@
+#Retificar a coluna de cpf
+##Nota - a coluna de CPF deve ter 11 dígitos e, provavelmente, alguns dígitios mais a esquerda são zero 
+
+###Etapa 1 - examinar a coluna original do CPF para ver se existe algum lixo (vírgual, ponto e vírgula)
+##Normalmente, a coluna de CPF aparece o final .0 no final de cada ocorrência. Assim, faz-se necessário eliminá-lo.
+
+df['SUPORTE_1'] = df['cpf'].str.replace('\.0', '') ##Vai substituir o .0 por nada
+#SUPORTE_1 é a coluna cpf sem '.0'
+
+###Etapa 2 - preencher com zeros a esquerda coluna SUPORTE_1 até ter 11 dígitos. 
+##OBS: Se SUPORTE_1 estiver com 11 dígitos, ela não será preenchida.
+
+df['CPF_VALIDO'] = df['SUPORTE_1'].str.zfill(11) 
+#CPF_VALIDO é a coluna retificada do CPF
+#zfill é uma função que adiciona zeros no começo de uma string até atingir um comprimento específico

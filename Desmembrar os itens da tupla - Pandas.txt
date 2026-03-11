@@ -1,0 +1,23 @@
+#Formas de desmembrar os elementos de uma tupla
+
+tupla_v1 = ('a','b','c','d')
+
+iten_1, iten_2, iten_3, iten_4 = tupla_v1
+
+#Saída
+iten_1 = a
+iten_2 = b
+iten_3 = c
+iten_4 = d
+
+#Se eu só quisesse definir dois elementos
+##Definir os elementos a e c
+iten_1,_,iten_3,_ = tupla_v1
+
+#Saída
+iten_1 = a
+iten_3 = c
+
+#Obter apenas um elemento
+##Quero apenas obter o elemento b
+_,item_2,*_ = tupla_v1

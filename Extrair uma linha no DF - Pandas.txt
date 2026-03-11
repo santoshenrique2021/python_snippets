@@ -1,0 +1,5 @@
+#Extrai uma linha específica do data frame
+
+df_2 = df.loc[df.index[X]]
+
+#Onde X é um número específico. A indexação de python começa por 0. Assim, se quiser obter a segunda linha coloca 1.

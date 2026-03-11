@@ -1,0 +1,83 @@
+#################################
+#Taxa de maus vs faixa de escore
+#################################
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns 
+import plotly.graph_objects as go
+
+#Output: Plota um gráfico que apresenta a taxa de maus vs faixa de escore
+
+#Nota
+##A função tem 4 parâmetros.
+###df - data farme
+###ESCORE_CS - coluna de escore. Deve ser escrita entre aspas.
+###ALVO - coluna binária que identifica se o cliente foi bom ou mau. Deve ser escrita entre aspas.
+###num_faixas - recomenda colocar 10. Se quiser mudar o valor, deve-se estar atento aqui quantile(np.linspace(0.1,1,num_faixas)) 
+    
+
+
+def taxa_por_faixa_escore(df, ESCORE_CS, ALVO, num_faixas):
+    prop = df[ESCORE_CS].quantile(np.linspace(0.1,1,num_faixas)) 
+    
+    resultados = {}
+    for i in range(0, num_faixas):
+        if i == 0:
+            df_prop = df.loc[df[ESCORE_CS] <= prop.iloc[i]]
+            Taxa_mau = round(100 * (df_prop[ALVO].value_counts() / df_prop[ALVO].shape[0]), 0)
+            resultados[f"<= {prop.iloc[i]}"] = [Taxa_mau]
+        elif i == num_faixas-1:
+            df_prop = df.loc[df[ESCORE_CS] >= prop.iloc[i-1]]
+            Taxa_mau = round(100 * (df_prop[ALVO].value_counts() / df_prop[ALVO].shape[0]), 0)
+            resultados[f">={prop.iloc[i-1]}"] = [Taxa_mau]
+        else:
+            df_prop = df.loc[(df[ESCORE_CS] > prop.iloc[i-1]) & (df[ESCORE_CS] <= prop.iloc[i])]
+            Taxa_mau = round(100 * (df_prop[ALVO].value_counts() / df_prop[ALVO].shape[0]), 0)
+            resultados[f"{prop.iloc[i-1]}-{prop.iloc[i]}"] = [Taxa_mau]
+
+    df_resumo = pd.DataFrame({'Faixa Escore': resultados.keys(),
+                            'Taxa bom': resultados.values(),
+                            'Taxa mau': resultados.values()})
+
+    df_resumo['Taxa bom'] = df_resumo['Taxa bom'].apply(lambda x: x[0][0])
+    df_resumo['Taxa mau'] = df_resumo['Taxa mau'].apply(lambda x: x[0][1])
+
+    df_resumo.reset_index(inplace=True)
+    df_resumo['index'] = 'F' + (df_resumo['index'] + 1).astype(str)
+    
+    
+
+
+    #------------------------ Construção do Gráfico -------------------    
+    df = df_resumo.copy()
+    # Remova o símbolo '%' antes de criar o gráfico
+    df['Taxa mau'] = df['Taxa mau'].astype('int')
+
+    # Criando o gráfico de linhas
+    fig = go.Figure(data=go.Scatter(x=df['index'], y=df['Taxa mau'], mode='lines'))
+
+    
+    df['Taxa mau_text'] = df['Taxa mau'].apply(lambda x: str(x) + '%')
+    # Adicionando rótulos de dados com valores percentuais
+    fig.add_trace(go.Scatter(x=df['index'], y=df['Taxa mau_text'],
+                            mode='markers+text',
+                            text=df['Taxa mau_text'],
+                            textposition='top center',
+                            textfont=dict(color='black')))
+    
+    df.drop('Taxa mau_text', axis=1, inplace=True)
+
+    # Customizando os rótulos das faixas
+    fig.update_layout(xaxis=dict(tickmode='array', tickvals=df['index'], ticktext=df['index']))
+
+    # Customizando os rótulos dos eixos e o título do gráfico
+    fig.update_layout(
+        xaxis_title='Faixas',
+        yaxis_title='Taxa Maus',
+        title='Taxa de Maus por Faixa de Escore',
+        template = 'plotly_white'
+    )
+    
+    display(df_resumo)
+    fig.show()

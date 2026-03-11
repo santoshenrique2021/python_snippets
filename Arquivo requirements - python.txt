@@ -1,0 +1,12 @@
+#Arquivo requirements
+##O arquivo requirements apresenta todas as bibliotecas (incluindo suas versões) do projeto associado
+
+##Aplicado ao jupyter notebook + anaconda
+
+
+
+#Etapa 1: Ativar o ambiente virtual no Prompt do anaconda
+##Nesta etapa, é possível definir o diretório onde deve-se salvar o arquivo requirements
+
+#Etapa 2: conda list --export > requirements.txt
+  

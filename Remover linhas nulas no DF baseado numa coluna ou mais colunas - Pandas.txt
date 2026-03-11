@@ -1,0 +1,3 @@
+#Remover de um data frame as linhas nulas de uma ou mais colunas
+
+df_v2 =df.na.drop(subset=["VARIAVEL_1", "VARIAVEL_2"]))

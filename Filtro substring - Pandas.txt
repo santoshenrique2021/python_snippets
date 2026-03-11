@@ -1,0 +1,5 @@
+#Filtro por string
+
+##Motivação - fazer um filtro para selecionar uma substring de uma variável categórica
+
+df.loc[df['COLUNA_CATEGORICA'].str.contains('substirng', case=False)]

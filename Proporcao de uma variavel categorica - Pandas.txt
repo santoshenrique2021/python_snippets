@@ -1,0 +1,4 @@
+#Proporção de uma variável categórica
+##Saber a proporção de cada level de uma variável categórica.
+
+100*(df['VARIAVEL_CATEGORICA'].value_counts())/df['VARIAVEL_CATEGORICA'].shape[0]

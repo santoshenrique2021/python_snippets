@@ -1,0 +1,9 @@
+#Salvar a base em parquet
+##Motivação: Tenho uma base grande e extrai do SQL e preciso salva-la
+
+##Antes de salvar colocar as variáveis de data em formato de data
+
+df['variavel_data'] = pd.to_datetime(df['variavel_data'], errors='coerce')
+
+##Salvar em parquet
+df.to_parquet('nome_arquivo.parquet', engine='fastparquet')

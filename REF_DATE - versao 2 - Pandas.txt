@@ -1,0 +1,9 @@
+#REF_DATE - versão 2
+##Tenho uma variável que está em estrutura de data e tem hora minuto e segundo. Assim, eu desejo remover o horário
+
+###Exemplo: 15/04/2024 23:42:03	
+
+###Quero deixar em formato de data
+
+df['REF_DATE'] = pd.to_datetime(df['REF_DATE'], dayfirst=True).dt.strftime('%d-%m-%Y')
+

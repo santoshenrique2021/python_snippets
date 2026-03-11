@@ -1,0 +1,16 @@
+#Sequência de pontos uniformemente espaçados
+
+##via numpy
+
+###arange
+z = np.arange(A, B, C)
+
+#A - menor valor (ponto de partida)
+#B - valor valor (ponto de parada)
+#C - incremento (tamanho do incremento)
+
+###linespace
+
+z = np.linspace(A, B, D)
+
+#D - total de pontos

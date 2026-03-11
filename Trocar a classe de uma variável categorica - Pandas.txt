@@ -1,0 +1,4 @@
+#Trocar a classe de uma variável categórica
+ 
+troca_classe = {'nome_antigo': 'nome_novo'}
+df['VARIAVEL_CATEGORICA'] = df['VARIAVEL_CATEGORICA'].replace(troca_classe, regex=True)

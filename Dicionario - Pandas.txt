@@ -1,0 +1,27 @@
+#Dicionario
+##Definição: coleção de dados que representam mapeamento (pares de valores)
+*Pares de valores:
+- chave
+- valor
+##Útil para criar dataframe
+
+##Estrutura:
+dict = {key_1: value_1, key_2: value_2, ...}
+
+##Criar um dicionário a partir de duas listas
+l1 = ['a', 'b', 'c']
+	l1.index('a')
+	resposta é 0 pois é o primeiro elemento da lista
+
+l2 = [1,2,3]
+
+##Dicionário
+di = dict(zip(l1,l2))
+type(di) 
+
+##Incluir um novo item no dicionário
+dit['d'] = 4
+
+##Excluir um item no dicionário
+del dit['a']
+

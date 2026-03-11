@@ -1,0 +1,3 @@
+#Remover linhas do data frame com base numa coluna
+
+df_2 = df.dropna(subset = ['NOME_DA_COLUNA'])

@@ -1,0 +1,5 @@
+#Saber a versão de uma biblioteca do python
+
+XXXX.__version__
+
+#XXX nome da biblioteca

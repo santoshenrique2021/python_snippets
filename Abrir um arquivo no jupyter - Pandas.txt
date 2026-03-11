@@ -1,0 +1,5 @@
+#Abrir um arquivo no S3 no jupyter 
+
+path = 'XXX' #Caminho no s3
+df = S3IO.read_dataframe(path)
+print(df.shape) #ver as características do dataframe

@@ -1,0 +1,2 @@
+#Total de linhas no DF
+df.shape[0]

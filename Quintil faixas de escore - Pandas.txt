@@ -1,0 +1,2 @@
+#Quintil faixas de escore
+df['VARIAVEL_ESCORE'].quantile(np.linspace(0.20,1,5))

@@ -1,0 +1,6 @@
+#Criar uma variável para identificar a linha de um data frame apresenta algum valor nulo, ou seja, uma coluna não está preenchida
+
+df['INFO_NULA'] = df.notnull().all(axis=1).astype(int)
+
+#Esta função notnull().all(axis=1) vai varrer toda linha e identificar se existe alguma coluna com valor nulo. Em caso de ausência
+#de valor nulo, ela vai atribuir 1, caso contrário, o valor é 0.

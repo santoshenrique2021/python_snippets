@@ -1,0 +1,4 @@
+#Frequência relativa de uma variável categórica
+round (100*(df['VARIAVEL_CATEGORICA'].value_counts()/df['VARIAVEL_CATEGORICA'].shape[0]),0) 
+#Frequência absoluta de uma variável categórica
+df['VARIAVEL_CATEGORICA'].value_counts()

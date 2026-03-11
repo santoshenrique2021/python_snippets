@@ -1,0 +1,8 @@
+#Concatenar duas colunas
+
+##Motivação: Eu quero criar uma terceira coluna que agrega o nome de duas colunas - processo de aglutinação.
+##Adicional: Eu vou querer colocar um separador entre o primeiro e o segundo nome.
+
+df['NOME_RESULTANTE'] = df['PRIMEIRA_COLUNA'].str.cat(df['SEGUNDA_COLUNA'], sep='-')
+
+#sep - representa o separador. Neste exemplo, eu estou separando os nomes da primeira e segunda colunas por um hífen.

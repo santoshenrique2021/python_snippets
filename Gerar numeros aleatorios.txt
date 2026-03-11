@@ -1,0 +1,21 @@
+#Obter números aleatórios inteiros de um intervalo
+
+from random import randrange
+
+#Obter um número aleatório
+
+randrange(100)
+#A saída vai ser um número aleatório entre 0 e 99. 
+
+#Se eu quiser obter uma sequência de números aleatórios
+##Por exemplo, obter 20 números aleatórios entre 0 e 99.
+
+#Processo dividido em três etapas:
+##1 Cria-se uma lista
+##2 Cria-se um laço (tipo for) que vai gerar 20 números aleatórios
+##3 Armazena-se os resultados desta lista
+
+lista = [] #Cria uma lista que vai armazenar os números
+
+for i in range(0, 20):
+  lista.append(randrange(100))

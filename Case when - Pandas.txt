@@ -1,0 +1,30 @@
+#case when
+##Motivação - criar uma variável que apresenta diversas condições - if else mais elaborado
+
+df['NOVA_VARIAVEL'] =    np.where(df['VARIAVEL_COMPARADA'] XX VALOR_COMPARADO, NOVO_VALOR,
+                         np.where(df['VARIAVEL_COMPARADA'] XX VALOR_COMPARADO, NOVO_VALOR,
+                         np.where(df['VARIAVEL_COMPARADA'] XX VALOR_COMPARADO, NOVO_VALOR, NOVO_VALOR*)))
+
+
+#XX - tipo de comparação. Pode ser ==, >, <, !=
+
+#NOVO_VALOR* - esse novo valor represente o else do if else, ou seja, se nenhuma condição for atendida, então coloque o complementar.
+
+
+#Utilização do map
+##Outra abordagem para fazer um case_when considerando a função map
+
+# 
+##Cria um dicionário para mapear as classes originais e as novas classes - a esquerda o original e a direita o novo
+mapa_situacao = {
+    'R': 'regular',
+    'F': 'titular_falecido',
+    'P': 'pendente_de_regularizacao',
+    'S': 'suspensa',
+    'C': 'cancelada',
+    'N': 'nula',
+    'I': 'irregular'
+}
+
+# Usando o método map() para atribuir as descrições
+df['variavel_nova'] = df['variavel_base'].map(mapa_situacao).fillna('else do if else')

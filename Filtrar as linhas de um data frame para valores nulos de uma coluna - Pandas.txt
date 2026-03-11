@@ -1,0 +1,2 @@
+#Filtrar as linhas de um data frame para valores nulos de uma coluna - Pandas
+df[df['nome_variavel'].isnull()].head(2)

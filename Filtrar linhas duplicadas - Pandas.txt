@@ -1,0 +1,8 @@
+#Filtrar linhas duplicadas
+
+##Objetivo: Filtrar linhas repetidas com base colunas.
+
+#Filtrar os valores duplicados considerando COLUNA_1 e COLUNA_2
+df_duplicado = df[df.duplicated(subset=['COLUNA_1', 'COLUNA_2'], keep=False)]
+#Visualização
+df_duplicado.head(3) #A saída vai ser um data frame com linhas duplicadas que tem os mesmos valores nas COLUNA_1 e COLUNA_2

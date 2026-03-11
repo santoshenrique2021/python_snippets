@@ -1,0 +1,6 @@
+#Linhas únicas baseadas em uma coluna
+##Vai realizar o drop na linha que apresenta o nome da variável repetida
+
+df_uni = df.drop_duplicates(subset='NOME_DA_VARIAVEL', keep="first") 
+
+#Vai manter a primeira linha e retirar as demais que apresentam o mesmo nome

@@ -1,0 +1,11 @@
+#Frequencia relativa (abordagem 5)
+
+##Calcular a taxa de maus e a volumetria do grupo
+
+taxa_maus_canal = df_final.groupby('CANAL_VARIAVEL_SECUNDARIA')['ALVO'].value_counts().unstack()
+#Adicionar a variável VOLUMETRIA
+taxa_maus_canal['VOLUMETRIA'] = taxa_maus_canal.sum(axis=1)
+#Adicionar a variável TAXA_MAUS
+taxa_maus_canal['TAXA_MAUS'] = round(100 * taxa_maus_canal.iloc[:, 1] / taxa_maus_canal.iloc[:, 2],1)
+#Visualização final
+taxa_maus_canal

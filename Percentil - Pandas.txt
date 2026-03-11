@@ -1,0 +1,5 @@
+#Calcular o percentil
+
+df['NOME_DA_VARIAVEL'].quantile(XX)
+
+##XX é o valor desejado. Assim, ele pode ser 0.7 (Percentil 70), 0.6 (Percentil 60), ...

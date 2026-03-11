@@ -1,0 +1,4 @@
+#Como usar a função np.where
+
+##Sintaxe da função
+np.where(condition, value_if_true, value_if_false)

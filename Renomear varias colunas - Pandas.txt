@@ -1,0 +1,15 @@
+#Renomear o nome de múltiplas colunas no data frame
+
+#Motivação - quero mudar o nome de várias colunas ao mesmo tempo
+
+#Procedimento - crio um dicionário que a partir dele eu aplico a função rename que deve especificar nas colunas.
+
+mapa = {
+
+"NOME_ORIGINAL_1": "NOVO_NOME_1",
+"NOME_ORIGINAL_2": "NOVO_NOME_2",
+"NOME_ORIGINAL_3": "NOVO_NOME_3"
+
+}
+
+df = df.rename(columns = mapa)

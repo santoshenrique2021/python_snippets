@@ -1,0 +1,4 @@
+#Remover as classes de uma variável categórica
+##Motivação: Você tem uma variável categórica com várias classes, então quer algumas delas.
+
+df_2 = df[~df['VARIAVEL_CATEGORICA'].isin(['CLASSE_1', 'CLASSE_2'])]

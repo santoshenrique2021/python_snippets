@@ -1,0 +1,4 @@
+#Renomear todas colunas para minúsculo
+##Assim, todas as colunas do data frame estarão em letra minúscula
+
+df.columns = df.columns.str.lower()

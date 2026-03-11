@@ -1,0 +1,5 @@
+#Identificar se o valor de uma coluna tem valores infinitos
+##Contexto: Tenho uma coluna numérica e quero ver qual observação tem valores infinitos para tal coluna 
+
+df_infinitos = df[np.isinf(df['sua_coluna'])]
+df_infinitos.head(3)

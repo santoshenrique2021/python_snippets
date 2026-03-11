@@ -1,0 +1,4 @@
+#Criar uma variável com duas condições
+## Criar uma variável que é formada por outras duas
+
+df['NOVA_VARIAVEL'] = np.where((df['VARIAVEL_1'] == 1) & (df['VARIAVEL_2'] == 0), 'CONDICAO_VERDADEIRA', ''CONDICAO_COMPLEMENTAR')

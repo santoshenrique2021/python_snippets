@@ -1,0 +1,10 @@
+#FLAG composta para variavel categoricas
+
+##Desejo que pelo menos duas classes sejam utilizadas para a construção da FLAG
+
+def nome_da_funcao(row):
+    if row['variavel_categorica'] in ['CLASSE_1', 'CLASSE_2']:
+        return 1
+    else:
+        return 0
+df['FLAG_COMPOSTA'] = df.apply(nome_da_funcao, axis=1)

@@ -1,0 +1,10 @@
+#Obter a primeira e a última data da coluna de REF_DATE
+
+##Variável de data: REF_DATE (a variável deve estar em formato de dat)
+
+#Período de tempo
+primeira_data = df['REF_DATE'].min()
+ultima_data = df['REF_DATE'].max()
+#Exibir as datas
+print("Primeira data:", primeira_data)
+print("Última data:", ultima_data)

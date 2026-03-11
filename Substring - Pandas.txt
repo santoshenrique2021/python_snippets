@@ -1,0 +1,6 @@
+#Substring
+##Filtrar se uma variável categórica apresenta uma interseção com algum termo (substring). Por exemplo, se 5779 apresenta na coluna de CPF.
+
+df[df['VARIAVEL_CATEGORICA'].str.contains("XXX")]
+
+#XXX é a substring

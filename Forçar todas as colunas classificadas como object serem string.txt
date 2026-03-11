@@ -1,0 +1,5 @@
+#Forçar todas as colunas classificadas como object se tornem string:
+
+
+for coluna in df.select_dtypes(include=['object']).columns:
+    df[coluna] = df[coluna].astype(str)

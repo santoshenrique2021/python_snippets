@@ -1,0 +1,6 @@
+#Remover linhas repetidas com base em uma variável
+
+df_2 = df.NOME_DA_VARIAVEL.drop_duplicates()
+
+##Se quiser ordenar os valores
+df_2.NOME_DA_VARIAVEL.sort_values()

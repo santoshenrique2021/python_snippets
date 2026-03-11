@@ -1,0 +1,17 @@
+#Abrir múltiplos CSV no pandas
+
+##Contexto: tenho várias tabelas com as mesmas colunas e gostaria de aglutina-las numa única tabela
+
+import glob
+
+file_names = glob.glob('*.csv') #Cria uma lista com todos os arquivos csv que estão no diretório
+
+data_frames = [] #Cria uma lista vazia que será preenchida através do loop for
+
+for file in file_names:
+    df = pd.read_csv(file, sep=';')
+    data_frames.append(df)
+    print(f"Read {file}: Shape = {df.shape}")
+
+
+base_full = pd.concat(data_frames, ignore_index=True) #Concatena essa tabela num arquivo único como um data frame.

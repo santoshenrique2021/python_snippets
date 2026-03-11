@@ -1,0 +1,8 @@
+
+#A função str.lower() vai converter todos os caracteres em minúsculos
+
+##Exemplo:
+
+df['COLUNA_1'].str.lower() - tudo que tem nela será convertido em minúsculo
+
+##Nota: COLUNA_1 é uma variável do tipo string

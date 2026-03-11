@@ -1,0 +1,10 @@
+#Funcao range
+
+#A função tem três parâmetros
+
+range(start, stop, step)
+
+#Parâmetro mandatório: stop
+
+#step representa o tipo de incremento
+

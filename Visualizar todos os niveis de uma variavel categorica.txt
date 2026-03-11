@@ -1,0 +1,4 @@
+#Visualizar todos os níveis de uma variável categórica
+
+df_variavelcategorica = df >> select(df.VARIAVEL_CATEGORICA) 
+df_variavelcategorica .drop_duplicates().sort_index()

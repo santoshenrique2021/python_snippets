@@ -1,0 +1,9 @@
+#Frequência relativa
+##Abordagem 2 - Filtrar a frequência da variável de interesse, ou seja, de quando a variável é 1.
+
+
+tx_ni_safra = df_ni.groupby(['SAFRA'])['FLAG_NEGADOS_ESCORE'].value_counts(normalize=False).unstack().fillna(0)
+freq_negados_escore = tx_ni_safra[1] / tx_ni_safra.sum(axis=1) * 100
+freq_negados_escore = round(freq_negados_escore, 2)
+freq_negados_escore = freq_negados_escore.rename('FREQUENCIA_NEGADOS_ESCORE')
+freq_negados_escore.head(20)

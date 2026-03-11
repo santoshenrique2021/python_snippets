@@ -1,0 +1,3 @@
+#Casting para float
+
+df['VARIAVEL_NUMERICA'] = df['NUMERICA'].astype(np.float64)

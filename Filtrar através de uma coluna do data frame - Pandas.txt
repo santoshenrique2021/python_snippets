@@ -1,0 +1,12 @@
+#Filtrar através de uma coluna do data frame
+
+##df_avaliacao - é uma tabela que tem todos os registros --tabela com várias colunas
+##diferenca - é uma tabela que tem um subconjunto de registros --tabela com uma coluna
+
+###Objetivo:
+#Criar uma tabela que tenha todas as informações para os registros presente na tabela em diferenca
+
+###Variáveis 
+#CHAVE_VENDEDOR
+
+df_final = df_avaliacao[df_avaliacao.CHAVE.isin(diferenca['CHAVE_VENDEDOR'])]

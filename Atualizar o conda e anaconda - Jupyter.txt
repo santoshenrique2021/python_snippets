@@ -1,0 +1,4 @@
+Atualizar o conda e anaconda
+
+conda update conda
+conda update anaconda

@@ -1,0 +1,6 @@
+#Identificar se a linha apresenta um valor ausente
+
+
+df.notnull().all(axis=1).astype(int)
+#Vai percorer cada linha do data frame e vai ver se existe uma coluna com valor ausente.
+#Se não tiver, vai aparecer 1. Caso contrário, zero.

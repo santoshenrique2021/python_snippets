@@ -1,0 +1,18 @@
+#Import necessários
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+df['NOME_DA_COLUNA'].plot(kind='hist',
+        alpha=0.7,
+        bins=10,
+        title='SUB-TÍTULO',
+        rot=45,
+        grid=False,
+        figsize=(9,6),
+        fontsize=14, 
+        color=['#A0E8AF', '#FFCF56'])
+plt.xlabel('NOME_DO_EIXO_X', fontsize=12)
+plt.ylabel("NOME_DO_EIXO_Y", fontsize=12)
+plt.suptitle("TÍTULO", fontsize=16)

@@ -1,0 +1,10 @@
+#Trazer as últimas colunas de um data frame para o começo
+
+##Vou utilizar a abordagem de tolist
+
+#Colocar as duas últimas colunas no começo
+nova_ordem = df.columns[-2:].tolist() + df.columns[:-2].tolist()
+
+#Reindexar o DataFrame
+df_final = df_original.reindex(columns=nova_ordem)
+

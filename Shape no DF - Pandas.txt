@@ -1,0 +1,2 @@
+#Saber o total de colunas e linhas de um DF
+df.shape

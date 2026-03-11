@@ -1,0 +1,12 @@
+#Mudar a ordem de uma determinada coluna num data frame
+##Supor que se deseja que uma variável seja a segunda coluna em um data frame
+
+#Movendo a coluna 'VARIAVEL_1' para a segunda posição usando insert
+col_to_move = 'VARIAVEL_1'
+second_pos = 1  #Index do python começa em zero
+
+#Pop a coluna 'VARIAVEL_1' (remove e armazena a coluna)
+col = df.pop(col_to_move)
+
+#Insere a coluna 'VARIAVEL_1' na posição 1 (segunda posição)
+df.insert(second_pos, col_to_move, col)

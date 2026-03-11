@@ -1,0 +1,3 @@
+#Visualizar todas as colunas do data frame
+##Uma por linha -- join com quebra de linha
+print('\n'.join(df.columns))

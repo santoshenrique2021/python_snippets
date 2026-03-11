@@ -1,0 +1,23 @@
+#######################
+#KS safra - Fórmula
+#######################
+
+#Aplicação: Calcular o KS safra a safra
+#Nota: É fundamental ter uma variável chamada SAFRA. Ela representa o mês associado aos dados.
+
+
+#A função tem argumentos:
+##1 - data frame
+##2 - A coluna alvo é a variável binária que indica se o cliente é adimplente ou não. O seu nome deve ser escrito entre aspas.
+##3 - A coluna escore é a coluna numérica que indica o escore do cliente. O seu nome deve ser escrito entre aspas.
+
+from scipy import stats
+def calcular_ks_por_safra(df, alvo, escore):
+    safras = df['SAFRA'].unique()
+    resultados = []
+    for safra in safras:
+        bons_escore = df.loc[(df[alvo] == 0) & (df['SAFRA'] == safra), escore].rename('bons')
+        maus_escore = df.loc[(df[alvo] == 1) & (df['SAFRA'] == safra), escore].rename('maus')
+        ks = stats.ks_2samp(bons_escore, maus_escore).statistic
+        resultados.append({'Safra': safra, 'KS': ks})
+    return pd.DataFrame(resultados).sort_values('Safra')

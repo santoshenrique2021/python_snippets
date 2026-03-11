@@ -1,0 +1,10 @@
+#Duas ou mais condições
+##Aplicar duas ou mais condições no data frame
+
+##No exemplo, eu estou criando um novo data frame a partir de duas condições 
+
+df_2 = df[(df.VARIAVEL XX 'VALOR_DA_VARIAVEL') AA (df.VARIAVEL ZZ 'VALOR_DA_VARIAVEL')]
+
+#XX e ZZ - representa o tipo de comparação: >,<, ==,!= 
+
+##AA - como é mais de uma condição, eu preciso especificar & (e) | (ou)

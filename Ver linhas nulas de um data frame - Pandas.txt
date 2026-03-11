@@ -1,0 +1,3 @@
+ver as linhas de um data frame que tenha ao menos um valor nulo em alguma de suas colunas
+
+df[df.isna().any(axis=1)]

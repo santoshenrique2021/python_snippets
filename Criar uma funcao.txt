@@ -1,0 +1,18 @@
+#Criar uma função
+
+##Estrutura
+
+def <nome>(<param_1>, <param_2>, ..., >param_n>):
+    <instruções>
+    return resultado
+
+#<nome> - nome da função
+#<param_1> - os parâmetros da função
+#<instruções> - o procedimento que a função deve fazer 
+#return - o retorno da função
+
+
+##Exemplo
+def media (lista):
+    calculo = round( sum(lista) / len(lista),2)
+    return calculo

@@ -1,0 +1,18 @@
+#ZIP - é um iterator
+##Aplicado para agregar elementos de duas listas
+##Output são pequenas tuplas 
+
+lista_1 = [1,2,3,4]
+lista_2 = ['a','b','c','d']
+
+#pega o elemento i da lista j
+#pega o elemento i da lista k
+
+zip (lista_1, lista_2)
+list zip (lista_1, lista_2)
+[(1, 'a'),
+ (2, 'b'),
+ (3, 'c'),
+ (4, 'd')]
+
+zip_v1 = list zip (lista_1, lista_2)

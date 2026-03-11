@@ -1,0 +1,6 @@
+#Abrir o arquivo em parquet
+df = pd.read_parquet('nome_arquivo.parquet', engine='fastparquet')
+
+print("✅ Arquivo carregado com sucesso!")
+print(f"📊 Shape: {df.shape}")
+print(f"🗂️  Colunas: {list(df.columns)}")

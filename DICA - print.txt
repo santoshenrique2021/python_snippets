@@ -1,0 +1,3 @@
+Em python, o print não armazena uma variável.
+Ao criar uma função e usar a função print como saída,
+ela não armazenará o resultado.

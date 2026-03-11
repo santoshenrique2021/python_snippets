@@ -1,0 +1,3 @@
+#Filtrar as linhas com base em valores nulos de um coluna
+
+df[df['vi_canal'].isnull()].head()

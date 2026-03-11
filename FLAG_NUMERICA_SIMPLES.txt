@@ -1,0 +1,7 @@
+#Criar uma variável tipo FLAG_NUMERICA
+##Abordagem mais simples
+
+##Comparar uma variável numérica e ver se o seu valor é maior ou menor que um valor específico
+
+df['FLAG_NUMERICA'] = df['COLUNA_NUMERICA'].apply(lambda x: 0 if x < NUMERO_REFERENCIA else 1)
+#Se x for menor que o NUMERO_REFERENCIA então 0, caso contrário, atribua o valor de 1

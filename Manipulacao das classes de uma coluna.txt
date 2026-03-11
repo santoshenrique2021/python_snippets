@@ -1,0 +1,16 @@
+#######################################
+#Manipulação das classes de uma coluna#
+#######################################
+
+##Aplicado a uma coluna categórica
+##Objetivo: colocar suas classes em minúsculo, sem caracteres especiais, sem acentos e trocar os espaços em branco por underline
+
+import unidecode 
+
+df_2['nome-original-modificado'] = (
+    df_2['nome-original']
+    .str.lower()  # Converte para minúsculas
+    .apply(unidecode.unidecode)  # Remove acentos/caracteres especiais
+    .str.replace(r'\W+', '_', regex=True)  # Substitui caracteres não alfanuméricos por _
+    .str.strip('_')  # Remove underscores extras do início/fim
+)

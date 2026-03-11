@@ -1,0 +1,2 @@
+#Valores únicos de uma coluna
+total_valores_unicos = df['nome_da_coluna'].nunique()

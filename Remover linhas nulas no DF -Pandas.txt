@@ -1,0 +1,2 @@
+#Remover as linhas que apresentam null values no data frame
+df_2 = df.dropna()

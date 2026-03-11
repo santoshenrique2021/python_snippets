@@ -1,0 +1,5 @@
+#Left join
+
+
+
+left_join = pd.merge(df_1, df_2, on = ['COLUNA_CHAVE_1', 'COLUNA_CHAVE_2'], how='left')

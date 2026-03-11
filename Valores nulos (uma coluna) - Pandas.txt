@@ -1,0 +1,5 @@
+#Se existe um valor nulo numa coluna do data frame
+df['NOME_DA_COLUNA'].isnull().values.any()
+
+#Somatório de valores nulos de uma coluna do data frame
+df['NOME_DA_COLUNA'].isnull().sum()

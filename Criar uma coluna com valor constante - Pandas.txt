@@ -1,0 +1,8 @@
+#Criar uma coluna com valor constante
+##Por exemplo, eu quero adicionar uma coluna que só vai ter um único valor (valor constante)
+
+valor_unico = XXX
+df = df.assign(NOME_DA_VARIAVEL =valor_unico)
+
+#XXX - o valor que eu quero que a coluna tenha
+#assign - esta palavra representa designar

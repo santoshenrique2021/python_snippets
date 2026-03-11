@@ -1,0 +1,6 @@
+#Filtro para múltiplas classes
+
+##Motivação: Tenho uma variável categórica com várias classes e quero filtrar algumas.
+
+
+df_2 = df[df['VARIAVEL_CATEGORICA'].isin(['CLASSE_1', 'CLASSE_2', 'CLASSE_3'])]

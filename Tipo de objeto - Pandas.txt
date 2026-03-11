@@ -1,0 +1,2 @@
+#Saber qual é o tipo de objeto
+type(df)

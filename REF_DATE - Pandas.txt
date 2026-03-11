@@ -1,0 +1,11 @@
+#Criar a variável REF_DATE (a data de referência) através de uma outra coluna.
+
+#Nota - Recomenda-se que a variável primitiva, utilizada para construir REF_DATE, esteja no formato string.
+
+df['REF_DATE'] = pd.to_datetime(df.NOME_DA_VARIAVEL_DE_DATA, format = XXX)
+#XXX é como a data está definida:
+##Exemplo: '%d/%m/%Y' isso representa DD/MM/AAAA.
+
+
+#Se a variável de data tiver hora, minuto e segundo, e desejar remover faça isso:
+df['REF_DATE'] = pd.to_datetime(df['instante']).dt.date

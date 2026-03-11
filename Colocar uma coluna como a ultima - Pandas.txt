@@ -1,0 +1,5 @@
+#Colocar uma coluna como a última num data frame
+
+##Colocar a COLUNA_CHAVE como última
+col = df.pop('COLUNA_CHAVE')
+new_df = pd.concat([df, col], 1)

@@ -1,0 +1,5 @@
+#Help de uma função
+
+#Saber sobre uma determinada função
+
+help(função)

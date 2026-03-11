@@ -1,0 +1,56 @@
+#Conectar python com o banco de dados PostgreSQL
+
+##Bibliotecas: sqlalchemy, pandas e psycopg2
+
+import pandas as pd
+from sqlalchemy import create_engine
+
+##Versão 2
+ 
+#Configuração do banco de dados
+usuario = ''
+senha = ''
+host = ''
+porta = ''
+banco = ''
+tabela = ''
+ 
+#Criação da URL de conexão
+url = f'postgresql+psycopg2://{usuario}:{senha}@{host}:{porta}/{banco}'
+ 
+#Engine de Conexão
+engine = create_engine(url)
+ 
+#Query
+ 
+query = f'''select --digitar o nome das colunas sem aspas
+from {tabela}  '''
+ 
+#executar a query
+ 
+df = pd.read_sql(query, engine) 
+
+
+##Versão 2
+
+import os
+import pandas as pd
+from sqlalchemy import create_engine
+from dotenv import load_dotenv
+
+# Carrega variáveis de ambiente
+load_dotenv()
+
+usuario = os.getenv('DB_USER')
+senha = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST')
+porta = os.getenv('DB_PORT')
+banco = os.getenv('DB_NAME')
+tabela = os.getenv('DB_TABLE')
+
+url = f'postgresql+psycopg2://{usuario}:{senha}@{host}:{porta}/{banco}'
+engine = create_engine(url)
+
+query = f'SELECT * FROM {tabela}'
+
+df = pd.read_sql(query, engine)

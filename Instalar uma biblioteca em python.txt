@@ -1,0 +1,5 @@
+#Instalar uma biblioteca em python
+
+!pip install XXX == YYYY
+#XXX - nome da biblioteca
+#YYYY - versão da biblioteca

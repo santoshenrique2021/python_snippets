@@ -1,0 +1,6 @@
+#Função ceil
+##Objetivo: Arredonda para o inteiro mais próximo 
+##(Arredonda para cima)
+
+from math import ceil
+ceil(1000/15)

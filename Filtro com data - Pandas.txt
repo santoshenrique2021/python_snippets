@@ -1,0 +1,7 @@
+#Filtro via data
+
+df_filtrado = df.loc[(df.REF_DATE XX 'ZZZZ')]
+
+#REF_DATE é a variável de data. Ela deve estar no formato de data
+#XX é a condição - ==,<=,<,>,>=,!=
+#ZZZZ - Data de comparação - YYYY-MM-DD

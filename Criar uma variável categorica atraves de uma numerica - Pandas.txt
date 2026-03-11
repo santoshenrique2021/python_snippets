@@ -1,0 +1,15 @@
+#Criar uma variável categórica através de uma variável numérica
+
+##Contexto: quero criar uma variável categórica por meio de uma variável quantitativa
+##Tarefa principal: Definir o intervalo das classes e os seus respectivos nomes
+
+
+
+intervalo_numerico_faixas = [0, NUMERO_1, NUMERO_2, NUMERO_3, NUMERO_4, float("inf")]
+categorias = ['CAT_1', 'CAT_2', 'CAT_3', 'CAT_4', 'CAT_5']
+
+##Nota: A definição dos intervalos deve ser maior que o número de categorias
+##Nota: float("inf") - isso pega o limite superior
+
+df['VARIAVEL_CATEGORICA_CRIADA'] = pd.cut(df["VARIAVEL_QUANTITATIVA"], bins = intervalo_numerico_faixas,
+                                       labels = categorias)

@@ -1,0 +1,12 @@
+#Mudar as classes de uma variável categórica
+##As classes são as categorias da variável categórica
+
+##Motivação - querer mudar o rótulo de classes das variáveis categóricas
+
+troca = {
+'NOME_ANTIGO_1' : 'NOME_NOVO_1',
+'NOME_ANTIGO_2' : 'NOME_NOVO_2',
+'NOME_ANTIGO_3' : 'NOME_NOVO_3',
+}
+
+df['NOVA_COLUNA'] = df.NOME_DA_VARIAVEL_ORIGINAL.map(troca)

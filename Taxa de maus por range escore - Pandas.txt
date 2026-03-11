@@ -1,0 +1,13 @@
+#Calcular a taxa de maus considerando range de escores
+
+##Etapa 1: Definir os range de escore
+intervalos = [XXX, YYY, ZZZ, III, DDD]
+###A variável intervalos diz o range de escore
+
+##Etapa 2: Adicionar a variável faixa_escore no data frame
+###Esta variável é definida através de intervalos
+df['faixa_escore'] = pd.cut(df['variavel_escore'], bins=intervalos, right=False)
+
+##Etapa 3: Aplica o group by e unstack
+freq_relativa = df.groupby('faixa_escore')['ALVO'].value_counts(normalize=True).unstack(fill_value=0)
+freq_relativa

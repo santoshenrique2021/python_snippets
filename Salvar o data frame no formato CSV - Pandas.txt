@@ -1,0 +1,3 @@
+#Salvar o data frame no formato CSV
+
+df.to_csv('nome_a_ser_salvo.csv', header=True, index=False, sep=';')

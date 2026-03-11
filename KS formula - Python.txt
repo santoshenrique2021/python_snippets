@@ -1,0 +1,17 @@
+#######################
+#KS - Fórmula
+#######################
+
+from scipy import stats
+
+#Nota: A função KS2 tem três argumentos:
+##1 - data frame
+##2 - A coluna alvo é a variável binária que indica se o cliente é adimplente ou não. O seu nome deve ser escrito entre aspas.
+##3 - A coluna escore é a coluna numérica que indica o escore do cliente. O seu nome deve ser escrito entre aspas.
+
+def calcular_ks_2samp(df, alvo, escore):
+    bons_escore = df.loc[df[alvo] == 0, escore].rename('bons')
+    maus_escore = df.loc[df[alvo] == 1, escore].rename('maus')
+    return stats.ks_2samp(bons_escore, maus_escore).statistic
+
+

@@ -1,0 +1,8 @@
+#Saber o total de classes de uma variável categórica
+
+#Constrói uma array com as classes únicas
+classes_unicas = df['VARIAVEL'].unique() 
+
+#Calcular o comprimento desta classe
+total_classes_unicas = len(classes_unicas)
+total_classes_unicas #

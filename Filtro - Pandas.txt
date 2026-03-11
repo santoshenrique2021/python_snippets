@@ -1,0 +1,6 @@
+#Filtro em Pandas
+
+df = df.loc[df['NOME_DA_VARIAVEL'] XX VALOR]
+
+#XX - é a condição (>,<,==,!=)
+#VALOR - o número (ou string) que será utilizado para ver se a comparação é atendida ou não.

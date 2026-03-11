@@ -1,0 +1,11 @@
+#Frequência relativa de uma variável casa com outra ao longo do mês
+##Exemplo: Saber a taxa de maus por safra
+
+fpd_mes = (
+    df.groupby('safra')['fpd']
+    .value_counts(normalize=True)
+    .unstack()
+    .rename(columns={0: 'fpd_bom', 1: 'fpd_mau'})
+)
+
+print(fpd_mes)

@@ -1,0 +1,5 @@
+#FLAG usando NA values
+
+##Desejo criar uma FLAG na qual, se a coluna de referência for nula, atribua um valor; caso contrário, atribua outro valor
+
+df['FLAG'] = np.where(pd.isnull(df['COLUNA_REFERENCIA']),VALOR_1,VALOR_2)

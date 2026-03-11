@@ -1,0 +1,2 @@
+#Filtrar linhas que tem os mesmos valores em duas variaveis - Pandas
+df[df['variavel_1'] == df['variavel_2']]

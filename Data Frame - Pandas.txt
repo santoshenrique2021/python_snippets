@@ -1,0 +1,16 @@
+#Criar um Data Frame
+## Criar um data frame a partir de um dicionário
+
+import pandas as pd
+
+dados = {
+'VARIAVEL_1':['STRING_A', 'STRING_B', 'STRING_C', 'STRING_D'],
+'VARIAVEL_2':[X,Y,Z,A]
+}
+
+#X,Y,Z,A são números
+
+df = pd.DataFrame(dados, index = ['COLUNA_A', 'COLUNA_B', 'COLUNA_C', 'COLUNA_D'])
+
+#O index é o nome da linha
+#VARIAVEL_1 e VARIAVEL_2 são as colunas 

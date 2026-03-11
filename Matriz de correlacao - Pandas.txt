@@ -1,0 +1,3 @@
+#Matriz de correlação
+
+corr_matrix = df.corr()

@@ -1,0 +1,3 @@
+#Filtrar as colunas numéricas de um data frame
+
+numeric_cols = df.select_dtypes(include=['int64', 'float64']).columns

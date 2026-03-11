@@ -1,0 +1,14 @@
+def calcular_ks_2samp(df, alvo, escore):
+    # Separa os escores para o grupo 'bons' e remove os valores ausentes
+    bons_escore = df.loc[df[alvo] == 0, escore].dropna().rename('bons')
+    
+    # Separa os escores para o grupo 'maus' e remove os valores ausentes
+    maus_escore = df.loc[df[alvo] == 1, escore].dropna().rename('maus')
+    
+    # Verifica se os grupos não estão vazios antes de calcular
+    if bons_escore.empty or maus_escore.empty:
+        print("Um dos grupos está vazio após remover valores ausentes.")
+        return 0  # Retorna 0 ou outro valor indicando que não foi possível calcular
+
+    # Calcula e retorna a estatística KS
+    return stats.ks_2samp(bons_escore, maus_escore).statistic

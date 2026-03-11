@@ -1,0 +1,6 @@
+#Comparação por aproximação
+##Motivação: Eu quero analisar (visualizar) uma classe de uma variável categórica, mas eu não tenho total certeza de como esta classe está efetivamente escrita. Eu sei que uma substring da classe.
+###Exemplo: Eu sei que a string tem escrito melego, mas não sei se tem um prefixo ou sufixo. Também não sei se está maiúsculo ou minúsculo. 
+
+df.loc[df['variavel_categorica'].str.contains('substring', case=False, na=False)].head()
+

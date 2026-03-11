@@ -1,0 +1,15 @@
+#Matriz de correlação
+
+##Bibliotecas
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+ 
+# Calcule a matriz de correlação
+correlation_matrix = df.corr(method='spearman')
+#df é o data frame com as variáveis
+ 
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=.5)
+plt.title('Spearman Correlation Heatmap')
+plt.show()

@@ -1,0 +1,10 @@
+#########################
+#Editar colunas no pandas
+#########################
+df.columns = (
+    df.columns.str.lower()  # Converte para letras minúsculas
+    .str.replace(' ', '-', regex=True)  # Substitui espaços por traços
+    .str.normalize('NFKD')  # Normaliza os caracteres Unicode
+    .str.encode('ascii', errors='ignore')  # Remove caracteres especiais
+    .str.decode('utf-8')  # Converte de volta para string
+)

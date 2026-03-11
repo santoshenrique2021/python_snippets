@@ -1,0 +1,6 @@
+#Transformar as variáveis categóricas em dummies
+##Aplicar afunção no data frame
+
+##Ponto fundamental - passar a lista das colunas categóricas
+ 
+df_2 = pd.get_dummies(df, columns=['COLUNA_1', 'COLUNA_2', 'COLUNA_3', ...])

@@ -1,0 +1,4 @@
+#Dica - pelo loop for
+
+for item in NOME_DA_TUPLA:
+ print (item) #vai aparecer cada elemento da tupla

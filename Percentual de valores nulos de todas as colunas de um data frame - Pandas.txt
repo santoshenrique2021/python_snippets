@@ -1,0 +1,4 @@
+#Percentual de valores nulos de todas as colunas de um data frame
+
+
+df.isnull().mean() * 100

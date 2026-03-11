@@ -1,0 +1,10 @@
+#Criação de uma variável que deseja pegar duas classes de uma variável categórica
+
+##Crio uma função que faz a busca por linha e depois aplico apply
+
+def canal_fisico (row):
+    if row['canal'] in ['DESKTOP_PRONTO_PF_PAP', 'DESKTOP_PRONTO_PF_AGENTES_AUT']:
+        return 1
+    else:
+        return 0
+df['flag_canal_fisico'] = df.apply(canal_fisico, axis=1)

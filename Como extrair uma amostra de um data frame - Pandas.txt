@@ -1,0 +1,31 @@
+#Como extrair uma amostra de um data frame
+##Contexto: Problema de classificação binária
+
+#Imports
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+#1. Abrir a base de dados
+df = pd.read_csv('base_dados.csv', sep = ';')
+#Visualização
+df.head(2)
+
+#2. Definir uma amostra
+##Tamanho: 5000 observações
+n_amostra = 5000
+
+#3. Data frame da amostra 
+
+amostra, _ = train_test_split(
+    df,
+    train_size=n_amostra,
+    stratify=df['ALVO'],  # Mantém a proporção do ALVO
+    random_state=42
+)
+
+##Visualização
+amostra.head(2)
+
+#4. Exportar o arquivo para o formato CSV
+amostra.to_csv('amostra_estratificada.csv', index=False) 	

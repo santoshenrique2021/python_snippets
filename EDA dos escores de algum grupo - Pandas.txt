@@ -1,0 +1,7 @@
+#EDA dos escores de algum grupo
+##Esse grupo pode ser: os bons ou os maus da variável ALVO
+
+##Assim, filtra-se a variável desejada e analisa-se a distribuição dos escores.
+
+#Escores dos bons
+df.query('ALVO == 0')['COLUNA_ESCORE'].describe()

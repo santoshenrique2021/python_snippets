@@ -1,0 +1,8 @@
+#Abrir arquivo no formato CSV
+df = pd.read_csv("NOME_DO_ARQUIVO.csv", sep = 'XX') 
+
+##XX - representa o separador entre colunas. Este pode ser: , ; espaço(tab) 
+
+#Se uma das colunas for CPF 
+#Já define CPF como string na hora que vai abrir o data frame
+df = pd.read_csv("df.csv", dtype={'CPF': object}, sep = ';') 

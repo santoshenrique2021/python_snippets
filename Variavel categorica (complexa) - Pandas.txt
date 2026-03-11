@@ -1,0 +1,20 @@
+#Criar uma variável categórica com múltiplas condições e múltiplos níveis
+##Esta variável é construída a partir de uma variável numérica 
+
+##Etapa 1 - Organizar as condições
+
+conditions = [
+    (df['VARIAVEL_NUMERICA'] XX Y) XX (df['VARIAVEL_NUMERICA'] XX Y),
+    (df['VARIAVEL_NUMERICA'] XX Y) XX (df['VARIAVEL_NUMERICA'] XX Y),
+    (df['VARIAVEL_NUMERICA'] XX Y) XX (df['VARIAVEL_NUMERICA'] XX Y),
+    (df['VARIAVEL_NUMERICA'] XX Y)
+    ] 
+
+##XX - é o tipo de condição
+##Y - é o valor de referência da condição
+
+##Etpa 2 - definir os níveis
+valores = ['NIVEL_1', 'NIVEL_2', 'NIVEL_3', 'NIVEL_4']
+
+##Etapa 3 - Criar a variável categórica
+df['NOME_DA_VARIAVEL_CATEGORICA'] = np.select(conditions, valores)

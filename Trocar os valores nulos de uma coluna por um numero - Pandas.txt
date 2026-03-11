@@ -1,0 +1,5 @@
+#Trocar os valores nulos/ausentes de uma coluna por uma constante (número)
+
+df['variavel_com_missing'] = df['variavel_com_missing'].fillna(X)
+
+#X - x representa o número que desejo preencher

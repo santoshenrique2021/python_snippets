@@ -1,0 +1,5 @@
+#Criar o arquivo requirements
+##1. Abrir o anaconda
+##2. Entrar na pasta desejada
+##3. Ativar o ambiente virtual
+##4. conda list --export > requirements.txt

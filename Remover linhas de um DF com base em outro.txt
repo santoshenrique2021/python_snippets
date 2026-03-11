@@ -1,0 +1,22 @@
+#Remover linhas de um data frame com base em outro
+#df1 - data frame original
+#df2 - data frame que apresenta as linhas que eu desejo remover em df1
+
+#Objetivo: Remover as linhas em df1 que estão presentes em df2
+
+#Passo 1
+#Mesclar os DataFrames usando o método 'merge' e definir o parâmetro 'indicator' como True
+merged_df = df1.merge(df2, how='left', indicator=True)
+##isso vai criar um data frame chamado merge que vai ter uma coluna chamada _merge
+###Essa coluna vai aparecer três elementos:
+left_only     
+both           
+right_only        
+
+#Passo 2
+#Criar um data frame que cujo filtro é _merge == 'left_only'
+filtered_df = merged_df[merged_df['_merge'] == 'left_only']
+
+#Passo 3
+#Remover a coluna '_merge'
+filtered_df = filtered_df.drop(columns='_merge')

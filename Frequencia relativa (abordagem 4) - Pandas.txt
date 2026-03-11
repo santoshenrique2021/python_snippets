@@ -1,0 +1,5 @@
+#Calcular a frequência relativa de uma variável dado outra cujo resultados possam estar organizados em colunas
+## Exemplo a frequência relativa da variável decisao_final ao longo das safras
+
+
+frequencia_relativa = df_join.groupby('VARIAVEL_SECUNDARIA')['variavel_chave'].value_counts(normalize=True).unstack()

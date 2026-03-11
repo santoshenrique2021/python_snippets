@@ -1,0 +1,5 @@
+#Primeiro elemento de uma lista
+
+##Identificar o primeiro elemento de uma lista
+
+lista[0]

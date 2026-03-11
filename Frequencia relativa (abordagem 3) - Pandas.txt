@@ -1,0 +1,24 @@
+#Frequência relativa
+
+#Abordagem - as classes da variável categórica estarão organizadas em colunas. 
+#Exemplo - calcular a frequência relativa da variável política ao longo das safras. A variável política tem várias classes, então cada classe ficará sendo uma coluna.
+
+# Calcula a contagem de ocorrências para cada combinação de SAFRA e POLITICA
+df_counts = df_ni.groupby(['SAFRA', 'POLITICA']).size().reset_index(name='COUNT')
+
+# Pivota os dados para ter 'POLITICA' como colunas
+df_pivot = df_counts.pivot_table(index='SAFRA', columns='POLITICA', values='COUNT', fill_value=0)
+
+# Calcula a soma total de ocorrências para cada SAFRA
+df_totals = df_counts.groupby('SAFRA')['COUNT'].sum()
+
+# Calcula a frequência relativa
+df_pivot_rel = df_pivot.div(df_totals, axis=0)
+
+# Arredonda a frequência relativa para duas casas decimais
+df_pivot_rel = df_pivot_rel.round(4)
+
+# Se quiser expressar as frequências relativas como porcentagens, você pode multiplicar por 100
+df_pivot_rel *= 100
+
+print(df_pivot_rel)

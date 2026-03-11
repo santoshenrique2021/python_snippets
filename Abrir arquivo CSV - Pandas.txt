@@ -1,0 +1,16 @@
+#Abrir um arquivo csv
+
+##Importar a biblioteca
+import pandas as pd
+##Opcional
+pd.set_option('display.max_rows,AAA') #AAA - o total de linhas que vai aparecer
+pd.set_option('display.max_columns,AAA') #AAA - o total de colunas que vai aparecer
+
+
+df = pd.read_csv('NOME_DO_ARQUIVO', sep = 'xxx') #isso já é um dataframe
+
+#xxx pode ser ; , \t, espaço
+#vai depender da forma como o arquivo foi salvo
+
+#Visualização
+df

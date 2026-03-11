@@ -1,0 +1,5 @@
+#Taxa de inadimplência por safra
+##Vai gerar como saída as frequências relativas dos bons e maus por safra
+
+tx_in_safra = round(df.groupby(['SAFRA'])['ALVO'].value_counts(normalize=True) * 100,0)
+tx_in_safra.head(10) #value_counts(normalize=True) vai dar a frequência relativa

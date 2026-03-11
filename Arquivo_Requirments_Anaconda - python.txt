@@ -1,0 +1,2 @@
+#Arquivo requirments
+pip freeze > requirements.txt

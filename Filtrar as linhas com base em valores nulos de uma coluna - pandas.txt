@@ -1,0 +1,5 @@
+#Filtrar as linhas com base em valores nulos de uma coluna
+
+df_filtrado = df[df['COLUNA'].isnull()]
+
+#COLUNA - é a coluna com valores que se deseja filtrar as observações que possuem missing.

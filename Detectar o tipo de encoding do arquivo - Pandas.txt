@@ -1,0 +1,12 @@
+#Detectar o tipo de encoding do arquivo
+##Motivação -- problema quando não é utf-8
+
+################################################
+import chardet
+
+# Detecta a codificação do arquivo
+with open('nome_arquivo_csv.csv', 'rb') as f:
+    result = chardet.detect(f.read())
+
+df = pd.read_csv('nome_arquivo_csv.csv', sep=';', encoding=result['encoding'])
+df.head(3)

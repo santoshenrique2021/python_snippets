@@ -1,0 +1,7 @@
+df.dtypes
+
+#nota - string representa object
+
+#Abordagem alternativa
+df.info()
+#Da o nome da variável, preenchimento, tipo

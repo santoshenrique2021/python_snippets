@@ -1,0 +1,9 @@
+#Obter uma amostra
+df2 = df.sample(frac = XXX, random_state=1927, replace=False)
+
+
+#XXX - definir a proporção - colocar um número entre 0 e 1.
+
+#replace=False
+##False - amostra sem reposição
+##True - amostra com reposição

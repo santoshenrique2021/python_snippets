@@ -1,0 +1,9 @@
+#Exibir o nome das colunas de um data frame em lista
+## Uma variável por linhas 
+
+#Extrair os nomes de todas as colunas
+nomes_das_colunas = df.columns.tolist()
+
+# Itera sobre a lista e imprime cada nome de coluna em uma nova linha
+for variavel in nomes_das_colunas:
+    print(variavel)

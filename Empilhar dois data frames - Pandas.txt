@@ -1,0 +1,9 @@
+#Merge dois data frames
+##Colocar um data frame em cima do outro - empilhar
+
+##Nota - ambos os data frames devem apresentar as mesmas colunas
+
+frames = [df1,df2]
+df = pd.concat(frames)
+#Visualização
+df.head(3)

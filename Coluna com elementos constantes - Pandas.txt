@@ -1,0 +1,5 @@
+#Criar uma variável no data frame que apresentará um único valor em todas as linhas
+##As observações receberão o mesmo valor
+
+df= df.assign(NOME_DA_VARIAVEL = XXX)
+#XXX valor a receber 

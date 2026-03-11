@@ -1,0 +1,3 @@
+#Safras disponíveis
+safra = df.SAFRA.drop_duplicates()
+safra.sort_values(ascending=True)

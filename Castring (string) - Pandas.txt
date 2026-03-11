@@ -1,0 +1,7 @@
+#Converter uma coluna para string (Casting string)
+
+##Versão 1 - Um casting
+df = df.astype({'NOME_DA_VARIAVEL': 'string'})
+
+##Versão 2 - Múltiplos casting
+df = df.astype({'NOME_DA_VARIAVEL': 'string', 'NOME_DA_VARIAVEL': 'string', ...})

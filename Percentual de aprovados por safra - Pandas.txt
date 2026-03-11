@@ -1,0 +1,5 @@
+#Percentual de aprovados por safra
+##O output vai dar o percentual de aprovados e reprovados por safra
+
+ap_safra = round(df.groupby(['SAFRA'])['STATUS_FINAL'].value_counts(normalize=True) * 100,0)
+ap_safra.head(10) #value_counts(normalize=True) vai dar a frequência relativa

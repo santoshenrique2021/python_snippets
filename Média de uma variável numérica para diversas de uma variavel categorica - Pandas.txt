@@ -1,0 +1,3 @@
+#Média de uma variável numérica para várias categorias
+
+df.groupby('VARIAVEL_CATEGORICA')['VARIAVEL_NUMERICA'].mean()

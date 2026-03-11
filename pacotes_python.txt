@@ -1,0 +1,9 @@
+
+
+pip install dataprep
+pip install pandas-profiling
+
+
+import pandas_profiling
+profile = df.profile_report(title='Pandas Profiling Report')
+profile

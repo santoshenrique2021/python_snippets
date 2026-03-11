@@ -1,0 +1,3 @@
+#Query
+##Aplicar a função query do python
+df.query("variavel_secundaria == valor_da_variavel")['variavel_princial'].operacao_que_se_deseja_saber

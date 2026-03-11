@@ -1,0 +1,2 @@
+#Mudança do nome de uma coluna
+df = df.rename(columns = {'NOME_ORIGINAL_DA_COLUNA':'NOVO_NOME'})

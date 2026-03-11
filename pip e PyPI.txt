@@ -1,0 +1,1 @@
+pip é um gerenciador de bibliotecas para Python. Ele é conectado ao PyPI (Python Package Index) que é o maior repositório centralizado para pacotes Python com melhores de bibliotecas disponíveis. 

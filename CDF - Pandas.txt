@@ -1,0 +1,11 @@
+#sort data
+data = df['VARIAVEL_NUMERICA']
+x = np.sort(data)
+
+#calculate CDF values
+y = 1. * np.arange(len(data)) / (len(data) - 1)
+
+#plot CDF
+plt.plot(x, y)
+plt.xlabel('VARIAVEL_NUMERICA')
+plt.title('TITULO')

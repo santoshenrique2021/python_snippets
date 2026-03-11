@@ -1,0 +1,5 @@
+#Volumetria por mês - V2
+vol_safra = df.groupby('SAFRA').size().reset_index(name='volumetria')
+#Renomeia as colunas
+vol_safra.columns = ['safra', 'volumetria']
+vol_safra.head(12)

@@ -1,0 +1,6 @@
+
+#Objetivo: Particionar uma string
+#Contexto: Imagina que eu tenho uma string que tem dois nomes separados por --. Como criar uma coluna com o que vem depois do --
+
+#Variável cod_login_vendedor 
+df['NOVA_COLUNA'] = df['VARIAVEL_ORIGINAL'].str.split('--').str[1]

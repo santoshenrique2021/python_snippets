@@ -1,0 +1,7 @@
+#Extrair o ano atual
+
+##Por exemplo, 2023
+
+from datetime import datetime
+
+ano_atual = datetime.today().year

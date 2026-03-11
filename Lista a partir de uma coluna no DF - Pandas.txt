@@ -1,0 +1,3 @@
+#Criar uma lista a partir de uma coluna no DF
+
+l_pn = df["NOME_DA_COLUNA_DO_DF"].tolist() #assim, os elementos dessa coluna se tornam uma lista

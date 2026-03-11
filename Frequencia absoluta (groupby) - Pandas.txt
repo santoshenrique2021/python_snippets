@@ -1,0 +1,3 @@
+#Frequência absoluta de uma variável categórica
+
+df.groupby('VARIAVEL_CATEGORICA').size()

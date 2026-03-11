@@ -1,0 +1,2 @@
+#Obter o nome de todas as colunas de um data frame
+list(df.columns.values)

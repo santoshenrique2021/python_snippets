@@ -1,0 +1,16 @@
+#Aglutinar vários data frames no formato csv num único arquivo
+
+
+#Nota: os arquivos devem estar no mesmo diretório
+#Nota: o nome de todas as colunas deve ser o mesmo para cada data frame
+
+
+##Etapa 1
+data_files = ['df1.csv', 'df2.csv', ..., 'df_n.csv'] #lista do nome de arquivos em CSV
+
+##Etapa 2
+df = pd.concat((pd.read_csv(filename, on_bad_lines='skip', sep = 'XXX') for filename in data_files))
+
+###on_bad_lines='skip' - se tiver alguma linha com problema, então pula
+###sep = é o separador de colunas. XXX pode ser , ; espaço
+###O ponto chave é concatenar os data frames por meio de um loop via for

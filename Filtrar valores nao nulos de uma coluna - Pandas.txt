@@ -1,0 +1,4 @@
+#Filtrar com base numa coluna valores não nulos
+
+##Objetivo: Filtrar um data frame com base nos valores não nulos de uma variável
+df_filtrado = df[df['nome_variavel'].notna()]

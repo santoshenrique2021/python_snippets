@@ -1,0 +1,5 @@
+#Último elemento de uma lista
+
+##Acessar o último elemento de uma lista
+
+lista[-1]

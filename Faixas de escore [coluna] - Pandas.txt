@@ -1,0 +1,10 @@
+#Criar uma coluna com as faixas de escores
+##Por exemplo: Decil
+
+#Faixas de escore
+df_teste['ESCORE_INTERVALO'] = pd.qcut(df_teste['ESCORE_DESK'], q=10)
+
+#ESCORE_DESK - variável de escore
+#q = 10 - indica o total de percentis criados
+
+##A coluna ESCORE_INTERVALO tem como output dez intervalos (as classes) que são as faixas de percentil.

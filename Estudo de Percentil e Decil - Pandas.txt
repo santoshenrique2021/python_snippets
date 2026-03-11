@@ -1,0 +1,2 @@
+https://www.geeksforgeeks.org/finding-the-quantile-and-decile-ranks-of-a-pandas-dataframe-column/
+https://www.geeksforgeeks.org/quantile-and-decile-rank-of-a-column-in-pandas-python/

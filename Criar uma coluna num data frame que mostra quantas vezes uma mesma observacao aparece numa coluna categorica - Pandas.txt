@@ -1,0 +1,11 @@
+#Criar uma coluna num data frame que mostra quantas vezes uma mesma observação aparece numa coluna categórica 
+##Nota: Esta coluna é categórica
+
+#Etapa 1
+contagem_coluna = df['coluna_categorica'].value_counts()
+
+#Etapa 2
+contagem_coluna = contagem_coluna.rename('CONTAGEM_COLUNA')
+
+#Etapa 3
+df = df.merge(contagem_coluna, left_on='contagem_coluna', right_index=True, how='left')

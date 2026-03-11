@@ -1,0 +1,2 @@
+#Contar o total de caracteres de uma string
+df['VARIAVEL_CATEGORICA_DIGITOS'] = df['VARIAVEL_CATEGORICA'].str.len()

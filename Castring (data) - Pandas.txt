@@ -1,0 +1,8 @@
+#Casting para data
+df['REF_DATE'] = pd.to_datetime(df.REF_DATE, format = XXX)
+
+XXX = '%Y-%m-%d'- atenção como está o formato original da variável data
+
+
+#Se precisar retirar a hora da variável data (utc)
+df['REF_DATE'] = pd.to_datetime(df.REF_DATE).dt.tz_localize(None)

@@ -1,0 +1,2 @@
+#Visualizar as linhas que apresentam algum valor nulo em alguma de suas colunas
+df[df.isnull().any(axis=1)]

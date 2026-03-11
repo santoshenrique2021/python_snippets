@@ -1,0 +1,4 @@
+#Ordenar os dados com base numa coluna do data frame
+##Ordena do menor para o maior.
+
+df.sort_values(by = 'NOME_DA_COLUNA', inplace = True)

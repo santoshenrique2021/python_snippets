@@ -1,0 +1,5 @@
+#Extrair um intervalo de linhas de um data frame
+df_2 = df.loc[df.index[X:Y,]]
+
+#X é a primeira linha que deve ser extraída
+#Y é a última linha que deve ser extraída

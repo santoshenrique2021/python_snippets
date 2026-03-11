@@ -1,0 +1,5 @@
+SAFRA
+#Variável SAFRA apresenta o mês e o ano
+#Criar a variável SAFRA a partir do REF_DATE
+
+df['SAFRA'] = df['REF_DATE'].dt.to_period('M')
