@@ -1,0 +1,10 @@
+#Correspondência - "De Para" entre data frames
+
+##Motivação: Dois data frames têm as mesmas colunas, mas um deles pode ter informações 
+que o outro não possui.
+
+##Objetivo: Identificar registros em df_1 que NÃO têm correspondência em df
+
+##Exemplo: Imagine que a "variavel_x" tem 3 classes -A, B e C em df e esta mesma variável no df_1 tem as seguintes classes  - A, B, C, D, G e F. Como identificar quais classes estão em df_1 e não estão em df (intersecção)?
+
+df_sem_correspondencia = df_1[~df_1['variavel_x'].isin(df['variavel_x'])]

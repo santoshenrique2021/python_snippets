@@ -1,0 +1,5 @@
+#Valores únicos de uma coluna
+
+df[['NOME_VARIAVEL']].nunique() 
+
+##Nota: NOME_VARIAVEL deve ser uma variável categórica 
