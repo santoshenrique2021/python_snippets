@@ -1,0 +1,17 @@
+#Saber a versão do Python e de alguma biblioteca
+
+## Estrutura
+
+### Inserir as bilbiotecas
+import pandas as pd
+import numpy as np
+import sklearn
+import joblib
+### Para saber a versão do Python
+import sys
+
+print(f"Python: {sys.version}")
+print(f"pandas: {pd.__version__}")
+print(f"numpy: {np.__version__}")
+print(f"scikit-learn: {sklearn.__version__}")
+print(f"joblib: {joblib.__version__}")
