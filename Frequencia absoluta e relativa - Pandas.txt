@@ -1,0 +1,4 @@
+#Calcular a frequência absoluta e relativa de uma variável categórica
+
+pd.DataFrame({'Absoluta': df['variavel_categorica'].value_counts(),
+              'Relativa (%)': (df['variavel_categorica'].value_counts(normalize=True) * 100).round(2)})
