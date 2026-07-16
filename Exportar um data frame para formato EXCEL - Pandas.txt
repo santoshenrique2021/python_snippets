@@ -1,0 +1,5 @@
+#Exportar um data frame para o formato EXCEL
+
+##Pandas
+
+df.to_excel('nome_do_arquivo.xlsx', sheet_name='Dados', index=False)
