@@ -1,0 +1,3 @@
+#Frequência absoluta e relativa considerando mais de uma variável 
+
+df_analise[['var_1', 'var_2']].apply(pd.Series.value_counts).pipe(lambda a: pd.concat({'Absoluta': a, 'Relativa (%)': (a / a.sum() * 100).round(2)}, axis=1))
